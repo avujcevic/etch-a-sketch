@@ -1,6 +1,6 @@
 #grid_container {
-    width: 600px;
-    height: 600px;
+    width: 640px;
+    height: 640px;
     border-style: solid;
     display: flex;
     flex-wrap: wrap;
