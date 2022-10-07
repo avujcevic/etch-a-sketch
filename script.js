@@ -1,6 +1,7 @@
 const container = document.querySelector("#grid_container");
-const gridSquare = document.createElement("div");
 
-gridSquare.style.cssText = "width: 60px; height: 60px; background-color: red;"
-
-container.appendChild(gridSquare);
+for (let i = 1; i <= 16; i++) {
+    const gridSquare = document.createElement("div");
+    gridSquare.style.cssText = "width: 150px; height: 150px; background-color: red; border-style: dashed; box-sizing: border-box;"
+    container.appendChild(gridSquare);
+}
