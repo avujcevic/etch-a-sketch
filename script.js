@@ -3,9 +3,12 @@ const containerWidth = container.clientWidth;
 
 const button = document.querySelector("button");
 button.addEventListener("click", () => {
-    let gridSize = prompt("Please enter desired squares per side")
-    deleteGrid(container);
-    generateGrid(gridSize);
+    let gridSize = getUserInput();
+
+    if (gridSize !== null) {
+        deleteGrid(container);
+        generateGrid(gridSize);
+    }
 });
 
 function generateGrid(squares) {
@@ -30,3 +33,13 @@ function deleteGrid(parent) {
     }
 }
 
+function getUserInput() {
+    while (true) {
+        let gridSize = prompt("Please enter desired number of squares per side (1-100)");
+        if (gridSize > 0 && gridSize <= 100) {
+            return gridSize;
+        } if (gridSize === null) {
+            return gridSize;
+        }
+    }
+}
